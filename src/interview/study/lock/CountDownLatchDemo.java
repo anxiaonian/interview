@@ -3,7 +3,7 @@ package interview.study.lock;
 /**
  * @Auther: xujh
  * @Date: 2019/11/9 15:26
- * @Description: 关门案例
+ * @Description: 关门案例&秦灭六国
  */
 
 import java.util.concurrent.CountDownLatch;
