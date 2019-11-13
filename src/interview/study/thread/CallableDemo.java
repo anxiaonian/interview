@@ -45,3 +45,11 @@ public class CallableDemo {
 
     }
 }
+/**
+ *console.out
+ -------------
+ AA**********调用callable
+ *********result=1124
+ **************main线程
+
+ */
