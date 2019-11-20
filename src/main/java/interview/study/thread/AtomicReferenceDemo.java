@@ -1,5 +1,9 @@
 package interview.study.thread;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -7,31 +11,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * @Date: 2019/11/8 14:04
  * @Description:
  */
-
+@AllArgsConstructor
+@Getter
+@Setter
 class User{
     String username;
     int age;
-
-    public User(String username, int age) {
-        this.username = username;
-        this.age = age;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
