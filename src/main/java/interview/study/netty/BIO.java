@@ -40,8 +40,9 @@ public class BIO {
 
         while (true){
             final Socket socket = serverSocket.accept();
+            System.out.println("当前监听连接的线程名字："+Thread.currentThread().getName());
+            System.out.println("等待连接....");
             System.out.println("连接了一个客户端");
-            System.out.println(Thread.currentThread().getName());
             //创建一个线程，与之通讯（单独写一个方法）
             threadPool.execute(new Runnable() {
 
@@ -62,10 +63,12 @@ public class BIO {
         try {
             //通过socket获取输入流
             InputStream inputStream = socket.getInputStream();
-            System.out.println(Thread.currentThread().getName());
+            //System.out.println("当前通讯线程名字："+Thread.currentThread().getName());
             //循环读取客户端发送的数据
             while (true){
-                int read = inputStream.read();
+                System.out.println("当前通讯线程名字："+Thread.currentThread().getName());
+                System.out.println("read....");
+                int read = inputStream.read(bytes);
                 if(read !=-1){
                     System.out.println("======"+new String(bytes,0,read).toString());
                 }else {
